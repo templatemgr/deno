@@ -45,7 +45,7 @@ __find_directory_relative() { find "$1"/* -not -path '*env/*' -not -path '.git*'
 # Define Variables
 EXPECTED_OS="alpine"
 TEMPLATE_NAME="deno"
-CONFIG_CHECK_FILE=""
+CONFIG_CHECK_FILE="nginx/nginx.conf"
 OVER_WRITE_INIT="yes"
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 TMP_DIR="/tmp/config-$TEMPLATE_NAME"
