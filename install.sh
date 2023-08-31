@@ -54,7 +54,7 @@ INIT_DIR="/usr/local/etc/docker/init.d"
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 GIT_REPO="https://github.com/templatemgr/$TEMPLATE_NAME"
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-grep -qsi "$EXPECTED_OS" /etc/*.release* || { echo "" && exit 1; }
+grep -qsi "$EXPECTED_OS" /etc/*.release* || { echo "Unexpected OS" && exit 1; }
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 [ "$TEMPLATE_NAME" != "sample-template" ] || { echo "Please set TEMPLATE_NAME" && exit 1; }
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
