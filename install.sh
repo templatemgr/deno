@@ -115,8 +115,9 @@ if [ -n "$CONFIG_CHECK_FILE" ]; then
   if [ ! -f "$CONFIG_DIR/$CONFIG_CHECK_FILE" ]; then
     echo "Can not find a config file: $CONFIG_DIR$CONFIG_CHECK_FILE"
     INSTALL_SH_EXIT_STATUS=1
-  else
-    echo "CONFIG_CHECK_FILE not enabled"
+  fi
+else
+  echo "CONFIG_CHECK_FILE not enabled"
 fi
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # custom operations
